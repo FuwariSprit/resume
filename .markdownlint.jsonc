@@ -1,0 +1,6 @@
+{
+  "MD013": { "line_length": 90 },
+  "MD024": { "siblings_only": true },
+  "MD033": { "allowed_elements": ["br"] },
+  "MD041": false
+}
