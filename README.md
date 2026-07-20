@@ -5,9 +5,12 @@
 ## 構成
 
 - [`resume.md`](./resume.md) — 職務経歴書の本体
-- [`docs/projects/`](./docs/projects/) — 案件ごとの詳細メモ（`resume.md` の概要欄を書く際の下書き・裏取り用）
-- [`docs/skills.md`](./docs/skills.md) — テクニカルスキルの棚卸し
-- [`docs/activities.md`](./docs/activities.md) — 登壇資料・執筆記事などのリンク集
+- [`docs/`](./docs/) — 職務経歴の**一次情報源**。ここにない実績はレジュメに書きません
+  - [`docs/projects/`](./docs/projects/) — 案件ごとの棚卸し
+  - [`docs/skills.md`](./docs/skills.md) — テクニカルスキルの棚卸し
+  - [`docs/activities.md`](./docs/activities.md) — 登壇資料・執筆記事などのリンク集
+  - [`docs/career-vision.md`](./docs/career-vision.md) — キャリアビジョン
+- `drafts/` — レジュメのドラフト（バージョンごとに採番）とレビュー結果。lint対象外
 
 ## セットアップ
 
@@ -46,6 +49,40 @@ VSCodeを使用している場合、次の拡張機能を入れるとリアル�
 
 ## 職務経歴書を更新する際の流れ
 
-1. 案件の詳細を思い出しながら `docs/projects/` にメモを書く（下書きなので体裁は気にしない）
-2. メモをもとに `resume.md` の該当セクションを整える
-3. `pnpm lint` で文章をチェックし、指摘があれば修正する
+転職ドラフト（[job-draft.jp](https://job-draft.jp/)）に提出するレジュメを想定した、
+Claude CodeのSkillによる4ステップのワークフローを用意しています。
+特定1社の求人票に向けた最適化ではなく、複数企業が読む前提の内容を作ります。
+
+```text
+/resume-interview  壁打ちして docs/ に一次情報源を書き溜める
+       ↓
+/resume-build      docs/ を元に drafts/resume-v1.md を生成
+       ↓
+/resume-review     4観点のサブエージェントが drafts/reviews/v1-*.md に指摘を出す
+       ↓
+/resume-revise     どの指摘を反映するか確認し、drafts/resume-v2.md を生成
+```
+
+| ステップ | Skill | やること |
+| --- | --- | --- |
+| 1. 壁打ち | `/resume-interview [対象]` | STAR法で経験を棚卸しし、`docs/` に保存する |
+| 2. 作成 | `/resume-build` | 一次情報源だけを使ってドラフトを組み立てる |
+| 3. レビュー | `/resume-review [バージョン]` | 観点ごとに分かれた4エージェントが並列でレビューする |
+| 4. 修正 | `/resume-revise [バージョン]` | 指摘の採否を確認し、新しいバージョンを作る |
+
+レビューの観点は4つに分かれており、各エージェントは担当外の観点に踏み込みません。
+
+| 観点 | エージェント | 見るもの |
+| --- | --- | --- |
+| アンチパターン（AP） | `resume-antipattern-reviewer` | レジュメのアンチパターン8種の検出 |
+| 企業側評価軸（QA） | `resume-quality-reviewer` | 企業が判断に必要な要素が書けているか |
+| キャリアビジョン（CV） | `resume-vision-reviewer` | 野望欄の書き方 |
+| 事実整合性・網羅性（FD） | `resume-fidelity-reviewer` | `docs/` との突き合わせ（誇張・捏造と、記載漏れ） |
+
+3〜4は繰り返せます。ドラフトは上書きせず `resume-v1.md` → `resume-v2.md` と採番するので、
+どのレビューで何を直したかを後から追えます。
+
+内容が固まったら `resume.md` に反映し、`pnpm lint` で文章をチェックしてください
+（`drafts/` はlint対象外なので、反映時にはじめてチェックがかかります）。
+
+判断の基準や書き方のルールは [`docs/README.md`](./docs/README.md) を参照してください。
