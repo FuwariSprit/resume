@@ -11,7 +11,7 @@ textlint/markdownlintによる文章チェックと、Claude CodeのSkill/Subage
 
 パッケージマネージャーは **pnpm** のみを使用する（**npmは使用しない**）。
 lintコマンドと設定は `package.json` / `.textlintrc.json` / `.markdownlint.jsonc` を参照。
-`drafts/` と `.claude/` はlint対象外（理由は [README.md](./README.md) を参照）。
+lintの対象は `resume.md` のみ（`docs/`・`drafts/`・`.claude/` などは対象外。理由は [README.md](./README.md) を参照）。
 
 ## アーキテクチャ：一次情報源とレジュメ作成の分離
 

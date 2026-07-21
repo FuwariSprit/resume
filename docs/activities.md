@@ -2,11 +2,7 @@
 
 登壇資料・執筆記事・社外イベントなどのリンク集です。`resume.md` の「その他の活動」欄はここから抜粋します。
 
-<!-- textlint-disable no-doubled-joshi -->
-
 - [2024/12/21 腐敗防止層と依存性の逆転を駆使して、ミニマムに変更に強くしてみる](https://tech.willgate.co.jp/entry/2024/12/21/090000)
-
-<!-- textlint-enable no-doubled-joshi -->
 
 - [2024/12/09 初めてTDDやってみたら、身に沁みてTDDの〝良さ〟を理解した話](https://tech.willgate.co.jp/entry/2024/12/09/120000)
 - [2024/11/12 つどえ！3社合同ハロウィンアフターパーティー！ LT資料](https://speakerdeck.com/fuwarisprit/tddwoyatutemitara-shen-niqin-mitetddno-liang-sa-woli-jie-sitahua)
