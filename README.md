@@ -10,7 +10,7 @@
   - [`docs/skills.md`](./docs/skills.md) — テクニカルスキルの棚卸し
   - [`docs/activities.md`](./docs/activities.md) — 登壇資料・執筆記事などのリンク集
   - [`docs/career-vision.md`](./docs/career-vision.md) — キャリアビジョン
-- `drafts/` — レジュメのドラフト（バージョンごとに採番）とレビュー結果。lint対象外
+- `drafts/` — レジュメのドラフト（バージョンごとに採番）とレビュー結果
 
 ## セットアップ
 
@@ -24,6 +24,7 @@ pnpm install
 
 [textlint](https://textlint.github.io/) と
 [markdownlint](https://github.com/DavidAnson/markdownlint) でMarkdownの文章・表記をチェックします。
+チェック対象は [`resume.md`](./resume.md) のみです（`docs/`・`drafts/`・`.claude/` などは対象外）。
 
 ```sh
 # チェックのみ
@@ -83,6 +84,6 @@ Claude CodeのSkillによる4ステップのワークフローを用意してい
 どのレビューで何を直したかを後から追えます。
 
 内容が固まったら `resume.md` に反映し、`pnpm lint` で文章をチェックしてください
-（`drafts/` はlint対象外なので、反映時にはじめてチェックがかかります）。
+（lintの対象は `resume.md` のみなので、反映時にはじめてチェックがかかります）。
 
 判断の基準や書き方のルールは [`docs/README.md`](./docs/README.md) を参照してください。

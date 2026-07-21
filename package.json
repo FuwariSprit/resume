@@ -4,8 +4,8 @@
   "private": true,
   "packageManager": "pnpm@10.13.1",
   "scripts": {
-    "lint": "textlint \"**/*.md\" && markdownlint \"**/*.md\"",
-    "lint:fix": "textlint --fix \"**/*.md\" && markdownlint --fix \"**/*.md\""
+    "lint": "textlint \"resume.md\" && markdownlint \"resume.md\"",
+    "lint:fix": "textlint --fix \"resume.md\" && markdownlint --fix \"resume.md\""
   },
   "devDependencies": {
     "@proofdict/textlint-rule-proofdict": "^3.1.2",
