@@ -2,6 +2,11 @@
 
 登壇資料・執筆記事・社外イベントなどのリンク集です。`resume.md` の「その他の活動」欄はここから抜粋します。
 
+- [2025/12/17 PHPで複雑な配列を使うのをやめよう！](https://tech.willgate.co.jp/entry/2025/12/17/120000)
+- [2025/12/04 設計はビジネスを加速させる武器になる——美しい設計への固執を超えて得た気づき](https://tech.willgate.co.jp/entry/2025/12/04/120000)
+- [2025/09/17 Claude CodeのPlanモードを駆使し、楽に品質を担保してみた](https://tech.willgate.co.jp/entry/2025/09/17/120000)
+- [2025/09/06 大吉祥寺.pm ChatGPT、Gemini、Claude は、なぜ似たようなUIを採用しているのか](https://youtu.be/mtYO91frvyg?si=yjzBUdZpY-W5qarz)（[スライド](https://speakerdeck.com/fuwarisprit/chatgpt-gemini-claude-ha-nazesi-tayounauiwocai-yong-siteirunoka)）
+
 - [2024/12/21 腐敗防止層と依存性の逆転を駆使して、ミニマムに変更に強くしてみる](https://tech.willgate.co.jp/entry/2024/12/21/090000)
 
 - [2024/12/09 初めてTDDやってみたら、身に沁みてTDDの〝良さ〟を理解した話](https://tech.willgate.co.jp/entry/2024/12/09/120000)
