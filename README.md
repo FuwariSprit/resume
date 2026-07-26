@@ -4,7 +4,8 @@
 
 ## 構成
 
-- [`resume.md`](./resume.md) — 職務経歴書の本体
+- [`resume.md`](./resume.md) — 提出用にまとめた職務経歴書。lintの対象はこのファイルのみ
+  （**一次情報源ではありません。** 記載内容の根拠は `docs/` にあります）
 - [`docs/`](./docs/) — 職務経歴の**一次情報源**。ここにない実績はレジュメに書きません
   - [`docs/projects/`](./docs/projects/) — 案件ごとの棚卸し
   - [`docs/skills.md`](./docs/skills.md) — テクニカルスキルの棚卸し

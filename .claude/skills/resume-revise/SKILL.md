@@ -3,7 +3,7 @@ name: resume-revise
 description: レビュー結果（drafts/reviews/vN-*.md）を一覧し、どの指摘を反映するかユーザーに確認したうえで、新しいバージョン drafts/resume-v(N+1).md を作成する。
 argument-hint: [レビュー対象のバージョン番号（省略時は最新）]
 disable-model-invocation: true
-allowed-tools: Read, Glob, Grep, Write, AskUserQuestion
+allowed-tools: Read, Glob, Grep, Write, Bash, AskUserQuestion
 ---
 
 # レジュメ修正
@@ -68,7 +68,8 @@ allowed-tools: Read, Glob, Grep, Write, AskUserQuestion
   修正案に「本人への確認が必要」とある内容は、勝手に埋めずに保留する
 - 修正案をそのまま貼るのではなく、前後の文脈に合う文章に整える
 - 文章スタイルは `.claude/skills/resume-build/references/writing-style.md` に従う。
-  修正で文章を書き足すときも、文体・改行・字数上限・リストの使い方・造語の避け方は同じ規約です
+  修正で文章を書き足すときも、文体・改行・字数上限・リストの使い方・造語の避け方は同じ規約です。
+  書き足しで開発単位が長くなったときは、同ファイルのコマンドで字数を数え直してください
 
 ### 5. 採否の記録を残す
 
