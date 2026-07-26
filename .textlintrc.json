@@ -1,6 +1,12 @@
 {
   "filters": {
-    "comments": true
+    "comments": true,
+    "allowlist": {
+      "allow": [
+        "コピペチェック",
+        "/\\d+\\.\\d+ Flash/"
+      ]
+    }
   },
   "rules": {
     "preset-smarthr": {

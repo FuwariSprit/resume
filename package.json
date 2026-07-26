@@ -13,6 +13,7 @@
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "markdownlint-cli": "^0.49.1",
     "textlint": "^15.7.1",
+    "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-filter-rule-comments": "^1.3.0",
     "textlint-rule-max-comma": "^4.0.0",
     "textlint-rule-max-kanji-continuous-len": "^1.1.1",
