@@ -67,6 +67,8 @@ allowed-tools: Read, Glob, Grep, Write, AskUserQuestion
 - 一次情報源（`docs/` 配下）にない事実を、修正のついでに補わない。
   修正案に「本人への確認が必要」とある内容は、勝手に埋めずに保留する
 - 修正案をそのまま貼るのではなく、前後の文脈に合う文章に整える
+- 文章スタイルは `.claude/skills/resume-build/references/writing-style.md` に従う。
+  修正で文章を書き足すときも、文体・改行・字数上限・リストの使い方・造語の避け方は同じ規約です
 
 ### 5. 採否の記録を残す
 
